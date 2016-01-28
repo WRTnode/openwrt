@@ -36,6 +36,8 @@ boot() {
 	grep -q debugfs /proc/filesystems && /bin/mount -o noatime -t debugfs debugfs /sys/kernel/debug
 	[ "$FAILSAFE" = "true" ] && touch /tmp/.failsafe
 
+	mknod /dev/spiS0 c 217 0
+
 	/sbin/kmodloader
 
 	# allow wifi modules time to settle

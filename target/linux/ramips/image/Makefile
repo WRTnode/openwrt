@@ -928,7 +928,7 @@ endif
 #
 
 ifeq ($(SUBTARGET),mt7621)
-  TARGET_DEVICES += mt7621 wsr-600 wsr-1166 dir-860l-b1 firewrt pbr-m1 re6500
+  TARGET_DEVICES += mt7621 wsr-600 wsr-1166 dir-860l-b1 firewrt pbr-m1 re6500 zbt-wg2626
 endif
 
 define Device/mt7621
@@ -974,6 +974,11 @@ define Device/pbr-m1
   IMAGE_SIZE := $(ralink_default_fw_size_16M)
 endef
 
+define Device/zbt-wg2626
+  DTS := ZBT-WG2626
+  IMAGE_SIZE := $(ralink_default_fw_size_16M)
+endef
+
 #
 # MT7628 Profiles
 #
@@ -994,7 +999,7 @@ endif
 
 #Image/Build/Profile/MT7688=$(call BuildFirmware/Default4M/$(1),$(1),mt7628,MT7628)
 #Image/Build/Profile/LinkIt7688=$(call BuildFirmware/Default32M/$(1),$(1),LinkIt7688,LINKIT7688)
-Image/Build/Profile/WRTNODE2R=$(call BuildFirmware/Default16M/$(1),$(1),wrtnode2r,WRTNODE2R)
+Image/Build/Profile/WRTNODE2R=$(call BuildFirmware/Default32M/$(1),$(1),wrtnode2r,WRTNODE2R)
 Image/Build/Profile/WRTNODE2P=$(call BuildFirmware/Default16M/$(1),$(1),wrtnode2p,WRTNODE2P)
 
 ifeq ($(SUBTARGET),mt7628)

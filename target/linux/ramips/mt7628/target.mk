@@ -9,7 +9,7 @@ FEATURES+=usb
 CPU_TYPE:=24kec
 CPU_SUBTYPE:=dsp
 
-DEFAULT_PACKAGES += ralink-wifi-mt76x8 kmod-sdhci-mt7620
+DEFAULT_PACKAGES += ralink-wifi-mt76x8
 
 define Target/Description
 	Build firmware images for Ralink MT7628 based boards.

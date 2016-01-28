@@ -1,3 +1,16 @@
+Hi this is the OpenWrt for WRTnodes
+
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/WRTnode)
+
+* links
+  * [http://wrtnode.cc]
+  * [http://wiki.wrtnode.cc]
+  * [http://wiki.wrtnode.com]
+* mail: pub$wrntode.com
+
+
+=========================================================================
+
 This is the buildsystem for the OpenWrt Linux distribution.
 
 Please use "make menuconfig" to configure your appreciated
